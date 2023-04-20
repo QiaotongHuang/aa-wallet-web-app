@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  padding: 0;
+  margin: 0;
+  min-height: 100vh;
+  background-position: 0 -30vh;
+  background-repeat: no-repeat;
+  background-image: radial-gradient(
+    50% 50% at 50% 50%,
+    rgba(255, 0, 122, 0.1) 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  box-sizing: border-box;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+.to-icon {
+  /* margin-top: 1rem; */
+  width: 1.5rem;
+  height: 1rem;
+  border-top: .1rem solid red;
+  border-right: .1rem solid red;
+  transform: rotate(45deg);
+}

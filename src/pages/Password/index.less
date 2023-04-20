@@ -1,0 +1,73 @@
+.home-container {
+  width: 100%;
+  padding: 1rem 2rem;
+}
+
+.welcome-icon {
+  width: 5rem;
+  height: 5rem;
+}
+
+
+.welcome-text {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-left: 1rem;
+}
+
+
+.home-welcome {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.contract-text {
+  font-size: 1.2rem;
+  margin-top: 1rem;
+}
+
+.login-btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin-top: 1rem;
+  padding: 1rem;
+  font-size: 1.2rem;
+  background: rgba(255, 255, 255, 0.565);
+  border-radius: 1rem;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+}
+
+.account-btn {
+  display: flex;
+  align-items: center;
+  margin-top: 1rem;
+  font-size: 1.2rem;
+}
+
+.login-btn-container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1.5rem;
+  .login-btn-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .btn-item-before {
+      display: flex;
+      align-items: center;
+      .btn-item-img {
+        width: 2rem;
+      }
+      .btn-item-text {
+        font-size: 1.2rem;
+        margin-left: .8rem;
+      }
+    }
+  }
+  .login-btn-item:not(:first-child) {
+    margin-top: 1rem;
+  }
+}
