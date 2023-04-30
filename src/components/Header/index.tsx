@@ -62,10 +62,10 @@ export default function Header() {
                         <StyledNavLink to={'/home'}>
                             Wallet
                         </StyledNavLink>
-                        <StyledNavLink to={'/applications'} >
+                        <StyledNavLink to={'/apps'} >
                             Applications
                         </StyledNavLink>
-                        <StyledNavLink id={`stake-nav-link`} to={'/uni'}>
+                        <StyledNavLink id={`stake-nav-link`} to={'/account'}>
                             Account
                         </StyledNavLink>
                     </HeaderLinks>

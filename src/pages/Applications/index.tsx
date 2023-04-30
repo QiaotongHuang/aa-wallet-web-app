@@ -26,11 +26,14 @@ export default function Home() {
     const toPassPage = () => {
         navigate('/password')
     }
+    const toWalletPage = () => {
+        navigate('/home')
+    }
 
     return (
         <div className="home-container">
             <div className="home-welcome">
-                <NavigateBefore />
+                <NavigateBefore onClick={toWalletPage}/>
                 <div className="welcome-text" >Welcome!</div>
             </div>
 
@@ -46,7 +49,11 @@ export default function Home() {
                     </div>
                     <NavigateNext/>
                 </div>
-
+            </div>
+            <div className="contract-text">
+                <p>Will support in release version:</p>
+            </div>
+            <div className="login-btn-container">
                 <div className="login-btn-item">
                     <div className="btn-item-before">
                       <img className="btn-item-img" src={hezuoguanxi} alt="" />

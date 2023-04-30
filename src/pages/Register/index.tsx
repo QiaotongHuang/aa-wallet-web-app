@@ -13,30 +13,28 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export default function Home() {
-
     const navigate = useNavigate(); 
 
     const toPasswordPage = () => {
         navigate('/password')
     }
 
-    const toCreatePage = () => {
-        navigate('/create')
+    const toLoginPage = () => {
+        navigate('/TencentLogin')
     }
 
     const toRecoverPage = () => {
         navigate('/recover')
     }
-
     const [textValue, setTextValue] = useState<string>("");
     const onTextChange = (e: any) => setTextValue(e.target.value);
     const handleSubmit = () => console.log(textValue);
     const handleReset = () => setTextValue("");
     return (
         <div className="home-container">
-            <div className="home-welcome" >
+            <div className="home-welcome">
                 <NavigateBefore onClick={toPasswordPage}/>
-                <div className="welcome-text" >Tencent</div>
+                <div className="welcome-text" >Register</div>
             </div>
 
             <div className="login-form">
@@ -50,15 +48,16 @@ export default function Home() {
                     value={textValue}
                     label={"Password"} //optional
                 />
-                <Button onClick={handleSubmit}>Login</Button>
+                <Button onClick={handleSubmit}>Register</Button>
             </div>
             {/* <div className="login-btn">
                 <Button variant="outlined" endIcon={<NavigateNext />}>
                     Choose a way to login or register with any account applications
                 </Button>
             </div> */}
-            <div className="account-btn" onClick={toCreatePage}>
-                <span>Create a new account</span>
+
+            <div className="account-btn" onClick={toLoginPage}>
+                <span>Login</span>
                 <NavigateNext />
             </div>
 

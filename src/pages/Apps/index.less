@@ -1,0 +1,96 @@
+.home-container {
+  width: 100%;
+  padding: 1rem 2rem;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2rem;
+  width: 100%;
+  .app-item{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .text {
+      white-space: nowrap;
+      font-size: 1.2rem;
+      font-weight: 700;
+      margin-left: 1rem;
+    }    
+  }
+}
+
+.items {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0.5rem;
+  width: 100%;
+  .rows {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    .display {
+      display: flex;
+      align-items: center;
+      .img {
+        width: 3rem;
+        height: 3rem;
+      }
+      // .img:hover{
+      //   background-color: #3e8e5a;
+      // }
+      .text {
+        white-space: normal;
+        font-size: 0.8rem;
+        width: 3rem;
+        // margin-right: 2rem;
+      }
+    }
+  }
+  .rows:not(:first-child) {
+    margin-left: 3rem;
+    // margin-right: 3rem;
+  }
+}
+
+.welcome-text {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-left: 1rem;
+}
+
+
+.home-welcome {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.contract-text {
+  font-size: 1.2rem;
+  margin-top: 1rem;
+}
+
+.login-btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin-top: 1rem;
+  padding: 1rem;
+  font-size: 1.2rem;
+  background: rgba(255, 255, 255, 0.565);
+  border-radius: 1rem;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+}
+
+.account-btn {
+  display: flex;
+  align-items: center;
+  margin-top: 1rem;
+  font-size: 1.2rem;
+}

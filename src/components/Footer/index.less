@@ -1,0 +1,47 @@
+.footer {
+    display: flex;
+    /* 设置为 flex 布局 */
+    justify-content: center;
+    /* 使内部元素水平居中 */
+    padding: 1rem;
+    margin-bottom: 0;
+    margin-left: -1rem;
+    margin-right: -1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    /* 设置页脚上下左右的内边距 */
+    background-color: rgba(64, 64, 64, 0.1);
+    /* 设置背景颜色 */
+
+    .button-wrapper {
+        display: flex;
+        /* 设置为 flex 布局 */
+        align-items: center;
+        /* 使内部元素垂直居中 */
+
+        .button {
+            display: flex;
+            /* 设置为 flex 布局 */
+            flex-direction: column;
+            /* 设置内部元素垂直排列 */
+            align-items: center;
+            /* 使内部元素水平居中 */
+            margin-right: 1rem;
+            /* 设置按钮之间的右侧边距 */
+
+            .image {
+                width: 3rem;
+                /* 设置图片宽度 */
+                height: 3rem;
+                /* 设置图片高度 */
+                margin-bottom: 0.5rem;
+                /* 设置图片与文字之间的间距 */
+            }
+
+            .span {
+                font-size: 1rem;
+                /* 设置文字大小 */
+            }
+        }
+    }
+}

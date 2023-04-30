@@ -13,7 +13,6 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export default function Home() {
-
     const navigate = useNavigate(); 
 
     const toPasswordPage = () => {
@@ -24,46 +23,46 @@ export default function Home() {
         navigate('/create')
     }
 
-    const toRecoverPage = () => {
-        navigate('/recover')
+    const toLoginPage = () => {
+        navigate('/TencentLogin')
     }
-
     const [textValue, setTextValue] = useState<string>("");
     const onTextChange = (e: any) => setTextValue(e.target.value);
     const handleSubmit = () => console.log(textValue);
     const handleReset = () => setTextValue("");
     return (
         <div className="home-container">
-            <div className="home-welcome" >
+            <div className="home-welcome">
                 <NavigateBefore onClick={toPasswordPage}/>
-                <div className="welcome-text" >Tencent</div>
+                <div className="welcome-text" >Recover</div>
             </div>
 
             <div className="login-form">
                 <TextField
                     onChange={onTextChange}
                     value={textValue}
-                    label={"Username"} //optional
+                    label={"Seed Phrase"} //optional
                 />
-                <TextField
+                {/* <TextField
                     onChange={onTextChange}
                     value={textValue}
                     label={"Password"} //optional
-                />
-                <Button onClick={handleSubmit}>Login</Button>
+                /> */}
+                <Button onClick={handleSubmit}>Recover</Button>
             </div>
             {/* <div className="login-btn">
                 <Button variant="outlined" endIcon={<NavigateNext />}>
                     Choose a way to login or register with any account applications
                 </Button>
             </div> */}
-            <div className="account-btn" onClick={toCreatePage}>
-                <span>Create a new account</span>
+
+            <div className="account-btn" onClick={toLoginPage}>
+                <span>Login</span>
                 <NavigateNext />
             </div>
 
-            <div className="account-btn" onClick={toRecoverPage}>
-                <span>Recover your account</span>
+            <div className="account-btn" onClick={toCreatePage}>
+                <span>Create a new account</span>
                 <NavigateNext />
             </div>
         </div>

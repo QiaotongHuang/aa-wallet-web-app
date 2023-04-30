@@ -2,6 +2,7 @@ import React from "react";
 import { ReactComponent as WalletIcon } from '@/assets/svg/wallet.svg'
 import './index.less'
 import { NavigateNext } from '@material-ui/icons';
+import { useNavigate } from "react-router-dom";
 import Button from '@material-ui/core/Button';
 import { makeStyles } from '@material-ui/core/styles'
 const useStyles = makeStyles((theme) => ({
@@ -12,6 +13,12 @@ const useStyles = makeStyles((theme) => ({
 
 export default function Home() {
     const classes = useStyles();
+    const navigate = useNavigate(); 
+
+    const toPassPage = () => {
+        navigate('/applications')
+    }
+
     return (
         <div className="home-container">
             <div className="home-welcome">
@@ -25,7 +32,7 @@ export default function Home() {
 
             <div className="login-btn">
                 <span>Choose a way to login or register with any account applications</span>
-                <NavigateNext />
+                <NavigateNext onClick={toPassPage}/>
             </div>
             {/* <div className="login-btn">
                 <Button variant="outlined" endIcon={<NavigateNext />}>
@@ -34,7 +41,7 @@ export default function Home() {
             </div> */}
             <div className="account-btn">
                 <span>Look up available login methods of your account</span>
-                <NavigateNext />
+                <NavigateNext onClick={toPassPage}/>
             </div>
         </div>
     )
